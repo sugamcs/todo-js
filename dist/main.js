@@ -1,1 +1,1 @@
-(()=>{const o={todos:[]},s={todos:[]},e=o.todos;s.todos.push(";helkahel"),e.push("Make a webpage"),console.log(s),console.log(o)})();
+document.addEventListener("DOMContentLoaded",(function(){const e=[],t=document.querySelector("form"),n=document.querySelector("#todo");t.addEventListener("submit",(function(o){o.preventDefault();const u=n.value;t.reset(),""!==u&&(e.push(u),console.log(e))}))}));

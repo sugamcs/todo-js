@@ -1,15 +1,26 @@
 function todoList() {
-    return {todos : []}
-} 
+    return { todos: [] };
+}
 
-const todoList1 = todoList()
-const todoList2 = todoList()
-const todos = todoList1.todos
-const todo1 = "Make a webpage"
-const todo21 = ";helkahel"
-const newTodos = todoList2.todos
-newTodos.push(todo21)
+document.addEventListener('DOMContentLoaded', function () {
+    const todoList1 = todoList();
+    const todos = todoList1.todos;
 
-todos.push(todo1)
-console.log(todoList2)
-console.log(todoList1)
+    const form = document.querySelector('form');
+    const inputContent = document.querySelector("#todo");
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault()
+        
+        const newTodo = inputContent.value;
+        form.reset()
+        
+
+        if (newTodo !== "") {
+            todos.push(newTodo);
+            console.log(todos);
+        }
+    });
+});
+
+
