@@ -1,0 +1,1 @@
+(()=>{const o={todos:[]},s={todos:[]},e=o.todos;s.todos.push(";helkahel"),e.push("Make a webpage"),console.log(s),console.log(o)})();
