@@ -7,11 +7,20 @@
     <script src="./main.js" defer></script>
 </head>
 <body>
-    <form method="get">
-        <label for="todo">Add todo:</label>
-        <input type="text" name="todo" id="todo">
-        <button type="submit" id="submit-button">Add</button>
-    </form>
+    <div class="container">
+        <div class="form">
+            <form method="get">
+            <label for="todo">Add todo:</label>
+            <input type="text" name="todo" id="todo">
+            <button type="submit" id="submit-button">Add</button>
+            </form>  
+        </div>
+        
+        <div class="todolist">
+            <div id="todolist"></div>
+        </div>
+    </div>
+    
   
 
 </body>

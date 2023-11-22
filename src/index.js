@@ -1,3 +1,6 @@
+const todoText = document.querySelector("#todolist")
+const mainContainer = document.querySelector(".container")
+
 function todoList() {
     return { todos: [] };
 }
@@ -18,9 +21,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (newTodo !== "") {
             todos.push(newTodo);
-            console.log(todos);
+            updateToDoList()    
         }
+
+        function updateToDoList() {
+            todoText.textContent = ""
+
+            todos.forEach(todo => {
+            const todoItem = document.createElement('li');
+            todoItem.textContent = todo
+            todoText.append(todoItem)
+    })
+}
+
     });
 });
-
 
