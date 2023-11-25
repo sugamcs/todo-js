@@ -3,25 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./main.js" defer></script>
+    <title>Todo List</title>
+    <script src="./main.js" defer ></script>
 </head>
 <body>
-    <div class="container">
-        <div class="form">
-            <form method="get">
-            <label for="todo">Add todo:</label>
-            <input type="text" name="todo" id="todo">
-            <button type="submit" id="submit-button">Add</button>
-            </form>  
-        </div>
-        
-        <div class="todolist">
-            <div id="todolist"></div>
-        </div>
+    <div class="main">
+        <form  id="form" action="#" method="get">
+            <label for="todo" name = "todo">Add a todo:</label>
+            <input type="text" name="todo" id="todo" placeholder="New todo..">
+            <button type="submit">Add</button>
+        </form>
     </div>
+
+    <div id="todo-content"></div>
     
-  
 
 </body>
 </html>
