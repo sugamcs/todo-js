@@ -1,38 +1,12 @@
-const todoList1 = todoList();
-const todos = todoList1.todos;
-const todoText = document.querySelector("#todo-content");
-const form = document.querySelector('#form');
-const inputContent = document.querySelector("#todo");
-
 function todoList() {
-    return { todos: [] };
+    return { todos: [] }
 }
 
-
-function todoPusher() {
-    form.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const newTodo = inputContent.value;
-    form.reset();
-
-    if (newTodo !== "") {
-        todos.push(newTodo);
-        updateToDoList();
-    }
-});
+function todoDetail(title, description, dueDate, priority, notes, checklist) {
+    return {title, description, dueDate, priority, notes, checklist}
 }
 
-
-function updateToDoList() {
-    todoText.textContent = "";
-
-    todos.forEach(todo => {
-        const todoItem = document.createElement('li');
-        todoItem.textContent = todo;
-        todoText.append(todoItem);
-    });
-}
-
-
-todoPusher()
+const todoList1 = todoList();
+const todo1 = todoDetail("new", "whip", "23 march", "high", "random shit", "wake up")
+todoList1.todos.push(todo1)
+console.log(todoList1);

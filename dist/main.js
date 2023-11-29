@@ -1,1 +1,1 @@
-(()=>{const e=[],t=document.querySelector("#todo-content"),n=document.querySelector("#form"),o=document.querySelector("#todo");n.addEventListener("submit",(function(c){c.preventDefault();const r=o.value;n.reset(),""!==r&&(e.push(r),t.textContent="",e.forEach((e=>{const n=document.createElement("li");n.textContent=e,t.append(n)})))}))})();
+(()=>{const o={todos:[]};o.todos.push({title:"new",description:"whip",dueDate:"23 march",priority:"high",notes:"random shit",checklist:"wake up"}),console.log(o)})();
